@@ -8,7 +8,7 @@ class GPSTrackPoint {
     BigDecimal longitude
     BigDecimal elevationMeters
     BigDecimal distanceMeters
-    Short heartRate
+    Long heartRate
 
     public GPSTrackPoint() { }
 

@@ -1,6 +1,6 @@
 package com.gpstweak.parsers
 
-import com.gpstweak.parsers.parsers.GPXParseService
+import com.gpstweak.service.parsers.GPXParseService
 import com.gpstweak.topograpix.GpxType
 import org.junit.Test
 

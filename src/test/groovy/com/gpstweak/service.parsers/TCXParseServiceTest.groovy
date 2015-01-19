@@ -1,6 +1,6 @@
 package com.gpstweak.parsers
 
-import com.gpstweak.parsers.parsers.TCXParseService
+import com.gpstweak.service.parsers.TCXParseService
 import com.gpstweak.trainingcenterdatabase_v2.TrainingCenterDatabaseT
 import org.junit.Test
 

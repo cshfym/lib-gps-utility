@@ -1,0 +1,48 @@
+// groovyc -d classes myclasses.groovy
+// jar cvf myclasses.jar -C classes .
+// http://www.topografix.com/GPX/1/1/gpx.xsd
+
+group = "com.gpstweak"
+version = 0.1
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'maven'
+
+def springVersion = "3.2.8.RELEASE"
+
+sourceSets {
+    main {
+        groovy {
+            srcDirs = ['src/groovy']
+        }
+        java {
+            srcDirs = ['src/java']
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.7'
+    compile "org.springframework:spring-context:${springVersion}"
+    compile 'javax.xml.bind:jaxb-api:2.2.12'
+    //compile 'joda-time:joda-time:2.0'
+
+    compile "junit:junit:4.11"
+}
+
+idea {
+    module {
+        downloadSources = true
+    }
+}
+
+task listJars << {
+    configurations.compile.each { File file -> println file.name }
+    println sourceSets.main.compileClasspath
+}

@@ -112,7 +112,6 @@ class GPSDataConverter {
         List<GPSTrackPoint> trackPoints = []
         tracks.each { track ->
             track.trackpoint.each { trackPoint ->
-              println "Timestamp: " + trackPoint.getTime() + ", BPM: " + trackPoint.getHeartRateBpm().getValue()
               trackPoints << new GPSTrackPoint(
                   timestamp: trackPoint.getTime().toGregorianCalendar().getTime(),
                   latitude: (null != trackPoint.getPosition()) ? trackPoint.getPosition().getLatitudeDegrees() : new BigDecimal(0.0),

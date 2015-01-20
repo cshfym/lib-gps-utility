@@ -14,8 +14,6 @@ import com.gpstweak.trainingcenterdatabase_v2.TrackT
 import com.gpstweak.trainingcenterdatabase_v2.TrainingCenterDatabaseT
 import org.springframework.stereotype.Component
 
-import java.text.SimpleDateFormat
-
 /**
  * Converts from the Topograpix GpxType object to a GPSData object.
  */
